@@ -1,0 +1,254 @@
+---
+layout: default
+permalink: /admin-company-summary
+title: Company
+subtitle: Company Name
+activeTab: admin-companies
+isChart: true
+scripts: [admin-company]
+---
+{% include admin-company-nav.html active="summary" %}
+<div class="block block-normal block-normal-main-padded mb-20">
+    <div class="row adminCompanySummaryChartsContainer">
+        <div class="col-lg-4">
+            <div class="box-shadowed-gray summary-chart-container">
+                <div class="heading-status">
+                    <h4 class="heading heading--blue">Absences</h4>
+                    <div class="status status--activated">
+                        Activated
+                    </div>
+                </div>
+                <div class="summaryChart">
+                    <canvas  id="adminCompanySummaryAbsences"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="box-shadowed-gray summary-chart-container">
+                <div class="heading-status">
+                    <h4 class="heading heading--mahroon">Users</h4>
+                    <div class="status status--activated">
+                        Activated
+                    </div>
+                </div>
+                <div class="summaryChart">
+                    <canvas  id="adminCompanySummaryUsers"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="box-shadowed-gray summary-chart-container">
+                <div class="heading-status">
+                    <h4 class="heading heading--purple">Additional hours</h4>
+                    <div class="status status--activated">
+                        Activated
+                    </div>
+                </div>
+                <div class="summaryChart">
+                    <canvas  id="adminCompanySummaryAddHours"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="box-shadowed-gray summary-chart-container">
+                <div class="heading-status">
+                    <h4 class="heading heading--violet">Presences</h4>
+                    <div class="status status--activated">
+                        Activated
+                    </div>
+                </div>
+                <div class="summaryChart">
+                    <canvas  id="adminCompanySummaryPresences"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="box-shadowed-gray summary-chart-container">
+                <div class="heading-status">
+                    <h4 class="heading heading--lightBlue">Expenses</h4>
+                    <div class="status status--disabled">
+                        Disabled
+                    </div>
+                </div>
+                <div class="summaryChart">
+                    <canvas  id="adminCompanySummaryExpenses"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="box-shadowed-gray summary-chart-container">
+                <div class="heading-status">
+                    <h4 class="heading heading--yellow">Documents</h4>
+                    <div class="status status--activated">
+                        Activated
+                    </div>
+                </div>
+                <div class="summaryChart">
+                    <canvas  id="adminCompanySummaryDocuments"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="box-shadowed-gray summary-chart-container">
+                <div class="heading-status">
+                    <h4 class="heading heading--brown">Events</h4>
+                    <div class="status status--disabled">
+                        Disabled
+                    </div>
+                </div>
+                <div class="summaryChart">
+                    <canvas  id="adminCompanySummaryEvents"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-shadowed-gray px-7 py-12">
+        <div class="row">
+            <div class="col-lg-6">
+                <h4 class="underlined-heading ">
+                    Information
+                </h4>
+                <table class="table heading-value-table mt-16 mb-0">
+                    <tr>
+                        <td>Number of users</td>
+                        <td><span class="weight-700">625</span> users</td>
+                    </tr>
+                    <tr>
+                        <td>Registration Date</td>
+                        <td>09/02/2020</td>
+                    </tr>
+                    <tr>
+                        <td>Subscription</td>
+                        <td>Premium</td>
+                    </tr>
+                    <tr>
+                        <td>State</td>
+                        <td>
+                            <span class="text-badge">
+                               <span class="badge badge-green-medium badge--normal-text badge--rounded badge--padded">In progress (6 months left)</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Period</td>
+                        <td>1 year</td>
+                    </tr>
+                    <tr>
+                        <td>Expiration date</td>
+                        <td>10/22/2021</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-lg-6">
+                <h4 class="underlined-heading ">
+                    General contact
+                </h4>
+                <table class="table heading-value-table mt-16 mb-0">
+                    <tr>
+                        <td>Email</td>
+                        <td>
+                            <a href="javascript::">
+                               company-name@contact.com
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>
+                            <a href="tel:+33624159505">
+                                + 33 6 24 15 95 05
+                             </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>121 Street BDG </td>
+                    </tr>
+                    <tr>
+                        <td>Zip Code</td>
+                        <td>91000</td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                        <td>Evry</td>
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td>France</td> 
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="AdminContactMarginTopDiv"></div>
+    <div class="box-shadowed-gray px-7 py-12">
+        <h4 class="underlined-heading ">
+            Administrators contacts
+        </h4>
+        <div class="table-responsive">
+            <table class="table heading-value-table mt-16 mb-0">
+                <tr>
+                    <td>Jean Dupont</td>
+                    <td>
+                        <a href="javascript:;">
+                            <i class="fa fa-envelope"></i>
+                            <span>stephane.harzelec@institutfrancais.org.uk</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="tel:+3354545454">
+                            <i class="fa fa-phone"></i>
+                            <span>+ 33  54 54 54 54</span>
+                        </a>
+                    </td>
+                    <td>
+                       <button class="btn btn-info">Switch MT</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jean-François Deviliela</td>
+                    <td>
+                        <a href="javascript:;">
+                            <i class="fa fa-envelope"></i>
+                            <span>jen-françois.deviliela@monentreprise.com</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="tel:+3354545454">
+                            <i class="fa fa-phone"></i>
+                            <span>+ 33  54 54 54 54</span>
+                        </a>
+                    </td>
+                    <td>
+                       <button class="btn btn-info">Switch MT</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Stephane Harzelec</td>
+                    <td>
+                        <a href="javascript:;">
+                            <i class="fa fa-envelope"></i>
+                            <span>stephane-Harzelec@companyname.co.fr</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="tel:+3354545454">
+                            <i class="fa fa-phone"></i>
+                            <span>+ 33  54 54 54 54</span>
+                        </a>
+                    </td>
+                    <td>
+                       <button class="btn btn-info">Switch MT</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

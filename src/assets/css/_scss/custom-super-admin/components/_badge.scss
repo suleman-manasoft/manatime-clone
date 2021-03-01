@@ -1,0 +1,61 @@
+.text-badge {
+    display: flex;
+    align-items: center;
+}
+
+.text-badge .badge {
+    min-width : 72px;
+    border-radius: 2px;
+    padding: 2px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    margin-left: 7px;
+}
+
+
+.text-badge .badge--rounded {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    min-width: auto;
+    align-self: center;
+}
+
+.text-badge .badge--warning {
+    background: $color-orange;
+}
+
+.text-badge .badge--success {
+    background: $color-green;
+}
+
+.text-badge .badge-green-medium {
+    background: $color-green-medium;
+}
+
+.text-badge .badge--danger {
+    background: $color-red;
+}
+
+.text-badge .badge--gray {
+    background: $color-gray-dark-3;
+}
+
+.text-badge .badge--normal-text {
+    font-size: 14px;
+    border-radius: 9.5px;;
+}
+
+.text-badge .badge--rounded {
+    font-size: 14px;
+}
+
+.text-badge .badge--padded {
+    padding: 2px 7px;
+}
+
+.text-w-57 .text {
+    width: 57px;
+}

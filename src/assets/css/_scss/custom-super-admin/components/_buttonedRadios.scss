@@ -1,0 +1,26 @@
+.buttoned-inline-radios {
+    display: flex;
+}
+
+.buttoned-inline-radios input {
+    display: none;
+}
+
+.buttoned-inline-radios label {
+    padding: 7px 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.buttoned-inline-radios input:checked + label {
+    background-color: $color-blue;
+    color: white;
+}
+
+.buttoned-inline-radios .radio-inline {
+    padding: 0;
+}
+
+.buttoned-inline-radios .radio-inline:not(:first-child) {
+    margin-left: 4px;
+}

@@ -1,0 +1,39 @@
+
+.primary-select {
+    background-color: $color-blue !important;
+    color: $color-white !important;
+}
+
+.primary-select>span {
+    color: $color-white;
+}
+
+.select2-container--bootstrap .select2-selection--single.primary-select .select2-selection__rendered {
+    color: $color-white;
+}
+
+.select2-container--bootstrap .select2-selection--single.primary-select .select2-selection__arrow b {
+    border-color: $color-white transparent transparent transparent;
+}
+
+.userSelect+span {
+    margin-right: 8px;
+    width: 163px;
+}
+
+.dashboardListSelectDropdown .dropdown-menu{
+    left: -330px;
+}
+
+.dashboardListSelectDropdown > button.dropdown-toggle {
+    background-color: $color-blue;
+    
+}
+
+.listGridSelect + span {
+    width: 92px
+}
+
+.listGridSelect + span {
+    width: 92px
+}

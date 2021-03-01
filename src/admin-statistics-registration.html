@@ -1,0 +1,101 @@
+---
+layout: default
+permalink: /admin-statistics-registration
+title: Statistics
+description: Statistics.
+isChart: true
+activeTab: admin-statistics
+scripts: [statistics]
+---
+
+<div class="btn-group btn-wrapper" role="group" aria-label="btn wrapper">
+  <a href="{% link admin-statistics-global.html %}">
+  <button type="button" class="btn btn-default">Global</button>
+  </a>
+  <a href="{% link admin-statistics-registration.html %}">
+  <button type="button" class="btn btn-default active">Registration</button>
+  </a>
+</div>
+
+<div class="block block-normal block-normal-main">
+  <div class="row">
+    <div class="col-sm-6">
+      <h5>Starts and end</h5>
+      <div class="input-wrapper input-daterange input-group" id="datepicker"> 
+          <input
+            type="text"
+            class="form-control input-sm datetime-input-size"
+            placeholder="mm/jj/aaaa"
+            aria-label="start"
+            name="start"
+          />
+          <span class="input-group-text input-icon-wrapper"
+          >
+          <i class="fa fa-arrow-right icon-right-arrow"></i>
+        </span>
+          <input
+            type="text"
+            class="form-control input-sm datetime-input-size"          
+            placeholder="mm/jj/aaaa"
+            aria-label="end"
+            name="end"
+          />
+        </div>
+      </div>
+    <div class="col-sm-6">
+      <h5>Period</h5>
+      <select
+        class="form-control input-sm datetime-input-size select2 simple-select"
+        aria-label="Default select example"
+      >
+        <option value="Select" >Select</option>
+        <option value="1">1 Year</option>
+        <option value="2">2 Years</option>
+        <option value="3">3 Years</option>
+        <option value="4">4 Years</option>
+        <option value="5">5 Years</option>
+        <option value="6">6 Years</option>
+        <option value="8">7 Years</option>
+        <option value="9">8 Years</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-8 text-left">
+      <h5>States</h5>
+      <div class="btn-group btn-group-primary" role="group" aria-label="...">
+        <button type="button" id="btn4" class="btn active">Days</button>
+        <button type="button" id="btn3" class="btn">Weeks</button>
+        <button type="button" id="btn2" class="btn">Months</button>
+        <button type="button" id="btn1" class="btn">
+          Years
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row btn-m">
+    <div class="col-sm-6 text-left">
+      <div
+        class="btn-group btn-group-primary"
+        role="group"
+        aria-label="btn wrapper"
+      >
+        <button type="button" class="btn-default btn-sm active">
+          <i class="fa fa-filter icon-filter-color">&nbsp;</i>Filter
+        </button>
+
+          <a href="{% link admin-statistics-registration.html %}">
+            <button type="button" class="btn-default btn-sm">
+            Reset
+            </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="block block-normal pb-0" style="min-height:580px;">
+  <canvas id="chart"></canvas>
+</div>

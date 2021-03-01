@@ -1,0 +1,60 @@
+#calendar-tracking{
+    background: #f7f7f7;
+    th,td{width: 12.5%;}
+    th{
+      font-weight: normal;
+      text-align: center;
+    }
+    & > tbody > tr > td{
+      height: 100px;
+      padding: 1px;
+      background: #fff;
+      .numDay{
+        overflow: auto;
+        div{
+          float: left;
+          min-width: 26px;
+          padding: 3px 5px;
+          background: $body-bg;
+          border-bottom-right-radius: $border-radius-large;
+          margin-bottom: 10px;
+          &.today{
+            background: $brand-info;
+            color: #fff;
+          }
+        }
+      }
+    }
+  
+    .emptyCase{
+      background: $gray-lighter;
+    }
+    td{
+      .add{
+        opacity: 0;
+      }
+      &:hover{
+        .add{opacity: 1;}
+      }
+    }
+    
+    .tracking{
+      display:block;
+      padding-left: 3px;
+      &:hover{
+        .view{
+            color: $link-hover-color;      
+        }
+      }
+      .view{
+        color: $gray-light;  
+        margin-bottom: 3px;
+        cursor: pointer;       
+      }
+    }
+
+    .total{
+        padding-top: 26px;
+        text-align: center;
+    }
+  }

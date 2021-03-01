@@ -1,0 +1,192 @@
+$page_min_height: 300px;
+
+#body{
+  min-height: $page_min_height;
+}
+
+a:hover,a:link {
+  text-decoration: none;
+}
+
+select[multiple="multiple"]{
+  height: $input-height-base;
+}
+
+#buttons_add{
+  margin-bottom: $line-height-computed;
+  width: 100%;
+  .button_text{
+    width: 85%;
+    float: left;
+    text-align: right;
+  }
+  .button_arrow{
+    width: 15%;
+  }
+  ul{
+    text-align: right;
+  }
+}
+
+.sidebar{
+  nav{
+    text-align: right;
+    &>div{
+      margin-bottom: $line-height-computed/4;
+      border: 1px solid transparent;
+      h4{
+        margin: 0;
+        margin-bottom: $line-height-computed/4;
+        a{
+          color:$text-color;
+        }
+      }
+    }
+    ul{
+      li{
+        margin-bottom: 1px;
+        &.active{
+         background-color: rgba(147,140,133,0.1);
+         a{
+          color:$brand-primary;
+         }
+        }
+      }
+      a{
+        display: block;
+        color:$text-muted;
+        &:hover{
+          background-color: rgba(147,140,133,0.1);
+          color: $text-color;
+        }
+      }
+    }
+    &#accordion{
+      ul{
+        a:after {
+          margin-left: 5px;
+          content: "\f105";
+          font-family: "FontAwesome";
+        }
+        a.lock:after {
+          content: "\f023";
+        }
+      }
+      h4{
+        a{
+          &:after {
+            margin-left: 5px;
+            content: "\f107";
+            font-family: "FontAwesome";
+          }
+        }
+      }
+    }
+  }
+}
+
+.block{
+  background: #fff;
+  padding: $line-height-computed;
+}
+
+.content{
+  @extend .block;
+  min-height: $page_min_height;
+}
+
+footer{
+  margin: $line-height-computed*2 0 $line-height-computed;
+  font-size: 12px;
+}
+
+.page-header, .page-header h1{
+  margin-top: 0
+}
+
+#absence_dashboard{
+  h4{
+    margin: 0
+  }
+}
+
+.legend{
+  .balance_positive{
+    background:$color-balance-positive;
+    color:darken($color-balance-positive,30);
+  }
+  .balance_negative{
+    background:$color-balance-negative;
+    color:darken($color-balance-negative,30);
+  }
+  .balance_pending{
+    background:$color-balance-pending;
+    color:darken($color-balance-pending,30);
+  }
+  .balance_consumed{
+    background:$color-balance-consumed;
+    color:darken($color-balance-consumed,30);
+  }
+  .validated,.refused,.pending,.canceled,.paid{
+    background:#fff;
+    color:$text-color;
+  }
+  .validated{@extend .tr-validated;}
+  .refused{@extend .tr-refused;}
+  .pending{@extend .tr-pending;}
+  .canceled{@extend .tr-canceled;}
+  .paid{@extend .tr-paid;}
+}
+
+.table-white{
+  background: #fff;
+}
+
+$tr-border-width:3px;
+.tr-pending{border-left:$tr-border-width solid $color-pending;}
+.tr-refused{border-left:$tr-border-width solid $color-refused;}
+.tr-validated{border-left:$tr-border-width solid $color-validated;}
+.tr-canceled{border-left:$tr-border-width solid $color-canceled;}
+.tr-paid{border-left:$tr-border-width solid $color-paid;}
+
+.balance_presence{
+  tbody tr{
+    td{
+      text-align: center;
+      font-size: $font-size-large;
+      small{
+        font-size: $font-size-small;
+        display: block;
+      }
+      &:first-of-type{
+        font-size: $font-size-base;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.information_user{
+  li span{
+    color: $text-muted;
+    font-size: $font-size-small;
+  }
+}
+
+.check_all_group{
+  margin-bottom: $form-group-margin-bottom;
+  small{
+    display: block;
+    margin-top: -10px;
+  }
+}
+
+@import "custom_calendar.v1";
+@import "custom_calendar.v2";
+@import "custom_gantt";
+@import "custom_counter_presence";
+@import "custom_subscription";
+@import "custom_step";
+@import "custom_activity";
+@import "custom_color";
+//@import "custom_calendar_tracking";
