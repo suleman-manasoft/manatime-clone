@@ -1,0 +1,471 @@
+<!doctype html>
+<html>
+  <head>
+      <title> Super Admin</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/back.v1.12.css" />
+<link rel="stylesheet" href="./assets/css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"
+    integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+    crossorigin="anonymous" />
+<link rel="icon" href="./assets/img/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_collapse_1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="assets/img/icon.png" class="pull-left" alt="" width="20">&nbsp;ManaTime</a>
+      </div>
+  
+      <div id="navbar_collapse_1" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li data-toggle="tooltip" data-placement="bottom" title="Soutenez ManaTime et gagnez une carte cadeau FNAC de 100€&nbsp;!">
+              <a href="#" data-toggle="modal" data-target="#referral">
+                  <span class="hidden-xs"><i class="fa fa-heart fa-lg text-danger"></i></span>
+                  <span class="visible-xs">
+                      <i class="fa fa-heart fa-lg text-danger"></i>
+                      Gagnez des récompenses
+                  </span>
+              </a>
+            </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              <i class="fa fa-question-circle fa-lg"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Aide</a></li>
+              <li><a href="#">Nous contacter</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              <i class="fa fa-cog fa-lg"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Organisation</li>
+              <li><a href="">Utilisateurs</a></li>
+              <li><a href="">Fonctions</a></li>
+              <li><a href="">Contrats</a></li>
+              <li><a href="">Organigramme</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Gestion des temps</li>
+              <li><a href="">Absences</a></li>
+              <li><a href="">Ajustements absence</a></li>
+              <li><a href="">Ajustements heure</a></li>
+              <li><a href="">Jours fériés</a></li>
+              <li><a href="#">Heures supp.</a></li>
+              <li><a href="">Time tracking</a></li>
+              <li><a href="#">Activités</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Autre</li>
+              <li><a href="#">ManaTime</a></li>
+              <li><a href="#">Notifications</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              <span class="hidden-sm">Bilal Hmiche&nbsp;<b>(BHInternet)</b> &nbsp;<span class="caret"></span></span>
+              <span class="visible-sm"><i class="fa fa-user"></i>&nbsp;<span class="caret"></span></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Mon entreprise</a></li>
+              <li><a href="#">Mes informations</a></li>
+              <li><a href="#">Facturation</a></li>
+              <li><a href="#">Déconnexion</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    </header>
+    <div id="body" class="container">
+      <div class="row">
+        <div class="col-sm-3 col-lg-2 hidden-xs">
+          <div class="sidebar">
+            <div id="buttons_add" class="btn-group">
+  <a href="" class="btn btn-success button_text"><i class="fa fa-plus"></i>&nbsp;Add</a>
+  <button type="button" class="btn btn-success button_arrow dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="">Absence</a></li>
+    <li><a href="#">Heure supp.</a></li>
+    <li><a href="#">Heure recup.</a></li>
+    <li><a href="#">Time tracking</a></li>
+    <li><a href="">Document</a></li>
+  </ul>
+</div>
+
+            
+<nav id="accordion" role="tablist" aria-multiselectable="true">
+  <div>
+    <h4>
+      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Admin
+      </a>
+    </h4>
+    <div id="collapse1" class="collapse in">
+      <ul class="list-unstyled"> 
+        <li  class="active"><a href="/">Dashboard</a></li>
+        <li  class=""><a href="/dashboard-companies">Companies</a></li>
+        <li  class=""><a href="/admin-statistics-registration">Statistics</a></li>
+        <li><a href="/">Management</a></li>
+        <li><a href="/">Super-Admin</a></li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h4>
+      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        Planning
+      </a>
+    </h4>
+    <div id="collapse2" class="collapse">
+      <ul class="list-unstyled">
+        <li><a href="/">Management</a></li>
+        <li><a href="/">Super-Admin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h4>
+      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        Absence
+      </a>
+    </h4>
+    <div id="collapse3" class="collapse">
+      <ul class="list-unstyled">
+        <li><a href="/">Management</a></li>
+        <li><a href="/">Super-Admin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h4>
+      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+        Hour
+      </a>
+    </h4>
+    <div id="collapse4" class="collapse">
+      <ul class="list-unstyled">
+        <li><a href="/">Management</a></li>
+        <li><a href="/">Super-Admin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h4>
+      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+        Presence
+      </a>
+    </h4>
+    <div id="collapse5" class="collapse">
+      <ul class="list-unstyled">
+        <li><a href="/">Management</a></li>
+        <li><a href="/">Super-Admin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h4>
+      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+        Expense
+      </a>
+    </h4>
+    <div id="collapse6" class="collapse">
+      <ul class="list-unstyled">
+        <li><a href="/">Management</a></li>
+        <li><a href="/">Super-Admin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h4>
+      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+        Document
+      </a>
+    </h4>
+    <div id="collapse7" class="collapse">
+      <ul class="list-unstyled">
+        <li><a href="/">Management</a></li>
+        <li><a href="/">Super-Admin</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div>
+    <h4>
+      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+        Event
+      </a>
+    </h4>
+    <div id="collapse8" class="collapse">
+      <ul class="list-unstyled">
+        <li><a href="/">Management</a></li>
+        <li><a href="/">Super-Admin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h4>
+      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+        Skills
+      </a>
+    </h4>
+    <div id="collapse9" class="collapse">
+      <ul class="list-unstyled">
+        <li><a href="/">Management</a></li>
+        <li><a href="/">Super-Admin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h4>
+      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+        Human Resource
+      </a>
+    </h4>
+    <div id="collapse10" class="collapse">
+      <ul class="list-unstyled">
+        <li><a href="/">Management</a></li>
+        <li><a href="/">Super-Admin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h4>
+      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse11">
+        Settings
+      </a>
+    </h4>
+    <div id="collapse11" class="collapse">
+      <ul class="list-unstyled">
+        <li><a href="/">Management</a></li>
+        <li><a href="/">Super-Admin</a></li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+
+          </div>
+        </div>
+        <div class="col-sm-9 col-lg-10">
+          <div class="page-header">
+               <h1>ManaTime Health
+                
+                
+          </div>
+          <div class="main-content">
+             <div class="mb-20">
+    <a href="/" class="btn btn-default btn-sm centered-button w-94" type="button">
+        <i class="fa fa-arrow-left fa-fw"></i>
+        <span>Back</span>
+    </a>
+</div>
+<div class="filterAndSearch mb-20">
+    <button class="btn btn-default btn-sm " type="button">
+        <i class="fa fa-filter fa-fw"></i>
+        <span class="hidden-xs">Filtrer</span>
+    </button>
+    <div class="input-group input-group-no-icon-bg">
+        <input class="form-control" placeholder="Search" aria-describedby="basic-addon2">
+        <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search"></i></span>
+    </div>
+</div>
+
+<div class="block block-normal block-normal-main">
+    <div class="form-group custom-form-group-simple">
+        <label>ManaTime uses states</label>
+        <select class="form-control select2 simple-select">
+            <option value=""></option>
+            <option>State 1</option>
+            <option>State 2</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group custom-form-group-simple">
+                <label>Start and end</label>
+                <div class="input-daterange input-group" id="datepicker">
+                    <input placeholder="aaaa-mm-jj" type="text" class="form-control" name="start" />
+                    <span class="input-group-addon"><i class="fa fa-arrow-right"></i></span>
+                    <input placeholder="aaaa-mm-jj" type="text" class="form-control" name="end" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="form-group custom-form-group-simple">
+                <label>Period</label>
+                <select class="form-control select2 simple-select">
+                    <option value=""></option>
+                    <option>Period</option>
+                    <option>Period 2</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-actions">
+        <button class="btn btn-primary btn-sm weight-700" type="button">
+            <i class="fa fa-filter fa-fw"></i>
+            <span>Filter</span>
+        </button>
+
+        <a class="btn btn-link btn-xs " href="/focus-dashboard">
+            Reset
+        </a>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered table-white custom-table-simple">
+        <thead>
+            <tr>
+                <th>
+                    Id - Company
+                    <a href="focus-dashboard.html?sort=id_desc" class="pull-right text-muted">
+                        <span class="fa fa-sort-alpha-desc"></span>
+                    </a>
+                    <a href="focus-dashboard.html?sort=id_asc" class="pull-right text-muted">
+                        <span class="fa fa-sort-alpha-asc"></span>
+                    </a>
+                    </a>
+                </th>
+                <th><i class="fa fa-users" aria-hidden="true"></i>
+                    <span class="text-success">Active</span> <span class="text-danger">(Inactive)</span>
+                    <a href="focus-dashboard.html?sort=active_desc" class="pull-right text-muted">
+                        <span class="fa fa-sort-alpha-desc"></span>
+                    </a>
+                    <a href="focus-dashboard.html?sort=active_asc" class="pull-right text-muted">
+                        <span class="fa fa-sort-alpha-asc"></span>
+                    </a>
+                </th>
+                <th>Last connection
+                    <a href="focus-dashboard.html?sort=last_connection_desc" class="pull-right text-muted">
+                        <span class="fa fa-sort-alpha-desc"></span>
+                    </a>
+                    <a href="focus-dashboard.html?sort=last_connection_asc" class="pull-right text-muted">
+                        <span class="fa fa-sort-alpha-asc"></span>
+                    </a>
+                </th>
+                <th>Last connection Admin
+                    <a href="focus-dashboard.html?sort=last_connection_admin_desc" class="pull-right text-muted">
+                        <span class="fa fa-sort-alpha-desc"></span>
+                    </a>
+                    <a href="focus-dashboard.html?sort=last_connection_admin_asc" class="pull-right text-muted">
+                        <span class="fa fa-sort-alpha-asc"></span>
+                    </a>
+                </th>
+                <th>Expiration
+                    <a href="focus-dashboard.html?sort=expiration_desc" class="pull-right text-muted">
+                        <span class="fa fa-sort-alpha-desc"></span>
+                    </a>
+                    <a href="focus-dashboard.html?sort=expiration_asc" class="pull-right text-muted">
+                        <span class="fa fa-sort-alpha-asc"></span>
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tr-canceled">
+                <td><a href="javacript::">01 - Company 1</a></td>
+                <td><span class="text-success">12</span> <span class="text-danger">(8)</span></td>
+                <td>06/12/2020</td>
+                <td>06/14/2019</td>
+                <td>10/17/2021</td>
+            </tr>
+            <tr class="tr-canceled">
+                <td><a href="javacript::">02 - Company 2</a></td>
+                <td><span class="text-success">12</span> <span class="text-danger">(8)</span></td>
+                <td>06/12/2020</td>
+                <td>06/14/2019</td>
+                <td>10/17/2021</td>
+            </tr>
+            <tr class="tr-canceled">
+                <td><a href="javacript::">03 - Company 3</a></td>
+                <td><span class="text-success">12</span> <span class="text-danger">(8)</span></td>
+                <td>06/12/2020</td>
+                <td>06/14/2019</td>
+                <td>10/17/2021</td>
+            </tr>
+            <tr class="tr-canceled">
+                <td><a href="javacript::">04 - Company 4</a></td>
+                <td><span class="text-success">12</span> <span class="text-danger">(8)</span></td>
+                <td>06/12/2020</td>
+                <td>06/14/2019</td>
+                <td>10/17/2021</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="m-0 custom-table-records">
+        88 companies
+    </p>
+    <nav>
+        <ul class="pagination pagination-xs">
+            <li class="page-item">
+                <a class="page-link" href="#"><i class="fa fa-angle-double-left"></i></a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
+            </li>
+            <li class="page-item active">
+                <a href="/focus-dashboard?page=1">
+                    1
+                </a>
+            </li>
+            <li class="page-item">
+                <a href="/focus-dashboard?page=2">
+                    2
+                </a>
+            </li>
+            <li class="page-item disabled"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
+            <li class="page-item disabled"><a class="page-link" href="#"><i class="fa fa-angle-double-right"></i></a>
+            </li>
+        </ul>
+    </nav>
+</div> 
+          </div>   
+        </div>
+      </div>
+    </div>
+    <footer>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script> 
+      
+      <script  src="./assets/js/jquery.min.js"></script>
+<script defer src="./assets/js/bootstrap.min.js"></script>
+<script defer src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/select2.full.min.js"></script>
+<script src='https://d11lu0htm9h2oc.cloudfront.net/js/bootstrap-datepicker.min.js'></script>
+<script src='https://d11lu0htm9h2oc.cloudfront.net/js/datepicker-locales/bootstrap-datepicker.fr.min.js'></script>
+<script src='https://d11lu0htm9h2oc.cloudfront.net/js/datepicker-locales/bootstrap-datepicker.en-GB.min.js'></script>
+      
+         <script type="text/javascript" src="./assets/js/dashboard.js"></script>
+      
+    </footer>
+  </body>
+</html>

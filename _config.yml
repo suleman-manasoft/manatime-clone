@@ -35,7 +35,7 @@ plugins:
 
 # Where things are
 source              : ./src
-destination         : ./_site
+destination         : ./site
 layouts_dir         : _layouts # Don't rename this, watch wouldn't't work
 data_dir            : _data # Don't rename this, watch wouldn't't work
 includes_dir        : _includes # Don't rename this, watch wouldn't't work
