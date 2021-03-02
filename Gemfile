@@ -18,16 +18,7 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   #gem 'jekyll-minifier'
   #gem 'html-proofer'
-  gem 'jekyll_picture_tag'
-end
-
-source "https://rubygems.org"
-ruby RUBY_VERSION
-gem "jekyll", "~> 3.8.5"
-gem "minima", "~> 2.5", ">= 2.5.1"
-group :jekyll_plugins do
-gem "jekyll-feed", "~> 0.6"
-gem "jekyll-paginate", "~> 1.1"
+  # gem 'jekyll_picture_tag'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
