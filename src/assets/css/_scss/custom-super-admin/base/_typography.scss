@@ -25,6 +25,13 @@ body {
 .page-header h1 {
     font-weight: 400;
     font-size: 24px;
+    > * {
+        @media (max-width: 600px){
+            display: block;
+            margin-top: 10px;
+        }
+    }
+
 }
 
 .heading-status {
@@ -129,4 +136,41 @@ body {
             }
         }
     }
+}
+
+
+.text-with-icons {
+    display: flex;
+    align-items: center;
+    i {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+}
+
+.page-header h1 {
+    font-size: 36px;
+}
+
+.page-header h1 small {
+    font-size: 24px;
+}
+
+.subtitleSection {
+  padding-left: 8px;
+  position: relative;
+  font-size: 24px;
+  color: $color-gray;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 1px;
+    background-color: $color-gray;
+    left: 0;
+    height: 45%;
+    bottom: 0;
+    transform: translateY(-35%);
+  }
 }

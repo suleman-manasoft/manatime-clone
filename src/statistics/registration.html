@@ -9,10 +9,10 @@ scripts: [statistics]
 ---
 
 <div class="btn-group btn-wrapper" role="group" aria-label="btn wrapper">
-  <a href="{% link admin-statistics-global.html %}">
+  <a href="{% link statistics/global-fr-comp.html %}">
   <button type="button" class="btn btn-default">Global</button>
   </a>
-  <a href="{% link admin-statistics-registration.html %}">
+  <a href="{% link statistics/registration.html %}">
   <button type="button" class="btn btn-default active">Registration</button>
   </a>
 </div>
@@ -21,9 +21,9 @@ scripts: [statistics]
   <div class="row">
     <div class="col-sm-6">
       <h5>Starts and end</h5>
-      <div class="input-wrapper input-daterange input-group" id="datepicker"> 
+      <div class="input-wrapper input-group"> 
           <input
-            type="text"
+            type="date"
             class="form-control input-sm datetime-input-size"
             placeholder="mm/jj/aaaa"
             aria-label="start"
@@ -34,7 +34,7 @@ scripts: [statistics]
           <i class="fa fa-arrow-right icon-right-arrow"></i>
         </span>
           <input
-            type="text"
+            type="date"
             class="form-control input-sm datetime-input-size"          
             placeholder="mm/jj/aaaa"
             aria-label="end"
@@ -86,7 +86,7 @@ scripts: [statistics]
           <i class="fa fa-filter icon-filter-color">&nbsp;</i>Filter
         </button>
 
-          <a href="{% link admin-statistics-registration.html %}">
+          <a href="{% link statistics/registration.html %}">
             <button type="button" class="btn-default btn-sm">
             Reset
             </button>

@@ -117,6 +117,44 @@ label.centered-checkbox {
         width: 100px;
         max-width: fit-content;
     }
+    tr .company-consult-state-column {
+        width: 160px;
+    }
+    tr .company-consult-hours-duration-column {
+        width: 125px;
+    }
+}
+
+.states-toggle-buttons {
+    margin: 0 -6px 0 -6px;
+}
+
+.detailedWhiteTooltip + .tooltip > .tooltip-inner  {
+    background-color: white;
+    color: black;
+    -moz-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+    min-width: 200px
+}
+
+.detailedWhiteTooltip + .tooltip > .tooltip-arrow {
+    border-top-color: white;
+    
+}
+
+.detailedWhiteTooltip + .tooltip.in {
+    opacity: 1;
+}
+
+.detailedWhiteTooltipContent {
+    text-align: left;
+    padding-inline-start: 20px;
+    
+    li {
+        margin-top: 5px;
+        font-weight: 500;
+    }
 }
 
 /*Change the size here*/

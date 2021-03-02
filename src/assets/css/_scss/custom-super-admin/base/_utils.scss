@@ -114,3 +114,10 @@
 .overflow-hidden {
     overflow: hidden;
 }
+
+.link-no-styling {
+    color: $color-gray;
+    &:hover {
+        color: currentColor;
+    }
+}

@@ -21,6 +21,9 @@
                 {% if page.subtitle %}
                 <small>{{ page.subtitle }}</small>
                 {% endif %}
+                {% if page.subtitleSection %}
+                <small class="subtitleSection">{{ page.subtitleSection }}</small>
+                {% endif %}
           </div>
           <div class="main-content">
              {{content}} 

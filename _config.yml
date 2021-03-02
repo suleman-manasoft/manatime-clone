@@ -30,8 +30,8 @@
 # Build settings
 plugins:
   - jekyll-sitemap #https://github.com/jekyll/jekyll-sitemap
-  #- jekyll-minifier #https://github.com/digitalsparky/jekyll-minifier
-  #- html-proofer #https://github.com/gjtorikian/html-proofer
+  - jekyll-minifier #https://github.com/digitalsparky/jekyll-minifier
+  - html-proofer #https://github.com/gjtorikian/html-proofer
 
 # Where things are
 source              : ./src
@@ -43,8 +43,6 @@ includes_dir        : _includes # Don't rename this, watch wouldn't't work
 sass:
   sass_dir: assets/css/_scss
   style: compressed
-
-github: [metadata]
 
 # Exclude from processing.
 # The following items will not be processed, by default.

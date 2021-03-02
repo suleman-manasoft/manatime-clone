@@ -131,12 +131,4 @@ window.onload = function () {
     width: 'auto'
   });
 
-  $('.input-group.date, .input-daterange').datepicker({
-    todayBtn: 'linked',
-    language: "fr",
-    todayHighlight: true,
-    clearBtn: true,
-    autoclose: true,
-    format: "yyyy-mm-dd",
-});
 };

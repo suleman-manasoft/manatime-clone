@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    $(".simple-select").select2({
+        theme: "bootstrap",
+        placeholder: "",
+        width: 'auto'
+    });
+
     $('.input-group.date, .input-daterange').datepicker({
         todayBtn: 'linked',
         language: "fr",
@@ -214,5 +220,24 @@ $(function(){
     });
     $(".mail").tooltip({
         placement: "left"
+    });
+    $(".leaveCategory").tooltip({
+        placement: "top"
+    });
+    $(".startAndEndAbsence").tooltip({
+        placement: "top"
+    });
+    $(".startAndEndAddIcon").tooltip({
+        placement: "right"
+    });
+
+    $(".detailedWhiteTooltip").tooltip({
+        placement: "top",
+        content: function() {
+            return $(this).attr('title');
+        }
+    });
+    $(".absencesAccepted").tooltip({
+        placement: "top"
     });
 });

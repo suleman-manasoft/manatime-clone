@@ -16,11 +16,11 @@
             User       
         </a>
         <div class="btn-group">
-            <a type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+            <a class="btn btn-default btn-sm dropdown-toggle {% if include.active == 'logs' %}active{% endif %}" data-toggle="dropdown">
             Logs <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Tablet</a></li>
-              <li><a href="#">Smartphone</a></li>
+              <li><a href="{% link admin-company-consult-logs-absences.html %}">Absences</a></li>
+              <li><a href="{% link admin-company-consult-logs-additional-hours.html %}">Additional Hours</a></li>
             </ul>
           </div>
           <a class="btn btn-default btn-sm"  href="javascript:;">
