@@ -1,0 +1,53 @@
+.btn-group-primary button {
+    background: $color-white;
+    border: 1px solid $color-gray-light-1;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-group-primary button.active , .btn-group-primary button:active , .btn-group-primary button:focus{
+    background: $color-blue;
+    border: 1px solid $color-blue-dark;
+    color: $color-white;
+}
+
+.btn-group-primary button:hover {
+    background-color: $color-blue-light;
+    border-color: $color-blue-light;
+    color:$color-white;  
+}
+
+.centered-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:16px;
+    padding-right: 16px;
+}
+
+.onlyIconButton {
+    width :47px;
+    height: 30px;
+    border-radius:3px
+}
+
+.filter-actions .btn-primary {
+    color: $color-white;
+    font-size: 12px;
+    padding: 2px 6px;
+}
+
+.filter-actions .btn-primary i {
+    color: $color-white;
+    font-size: 12px;
+}
+
+.filter-actions .btn-link:active , .filter-actions .btn-link:focus {
+    box-shadow: none;
+    outline: none;  
+}
+
+
+.small-padded-button {
+    padding: 2px 8px;
+}

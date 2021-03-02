@@ -1,0 +1,14 @@
+<div id="buttons_add" class="btn-group">
+  <a href="{{ path_for('abs-create') }}" class="btn btn-success button_text"><i class="fa fa-plus"></i>&nbsp;Add</a>
+  <button type="button" class="btn btn-success button_arrow dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="{{ path_for('abs-create') }}">Absence</a></li>
+    <li><a href="#">Heure supp.</a></li>
+    <li><a href="#">Heure recup.</a></li>
+    <li><a href="#">Time tracking</a></li>
+    <li><a href="{{ path_for('document-create') }}">Document</a></li>
+  </ul>
+</div>

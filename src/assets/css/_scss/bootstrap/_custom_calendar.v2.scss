@@ -1,0 +1,181 @@
+$calendar_cell_width: 30px;
+$calendar_cell_user_width: 200px;
+$calendar_chip_size: 8px;
+$calendar_chip_color: #bdc3c7;
+$calendar_service_background : #f7f7f7;
+
+#calendar-v2{
+	background: $body-bg;
+	margin-bottom: 0;
+	thead{
+		tr{
+			th{
+				width: $calendar_cell_width;
+				&:first-child{
+					width: unset;
+				}
+			}
+		}
+		.date_day,.date_number{
+			th{
+				padding: $padding-xs-vertical $padding-xs-horizontal;
+				text-align: center;
+				border:1px dotted $gray-light;
+				&:first-child{
+					border:0;
+					background: $body-bg;
+				}
+				&.new_week{
+					border-left:1px solid $gray;
+				}
+			}
+		}
+		.date_day{
+			color:$gray-light;
+			th{
+				font-size: $font-size-small;
+				background: #f7f7f7;
+				font-weight: normal;
+				&.today{
+					background: $brand-info;
+				}
+			}
+		}
+		.date_number{
+			th{
+				background-color: #fff;
+			}
+		}
+		.month{
+			background: $body-bg;
+			th{
+				border-bottom: 0px;
+				&.month_display{
+					background-color: $body-bg;
+					border-left: 1px dotted darken($body-bg, 10);
+					color: $gray-light;
+					&:first-child{
+						border-left: 0px;
+					}
+				}
+			}
+		}
+	}
+	tbody{
+		tr{
+			background: #fff;
+			td{
+				border-right:1px solid $gray-lighter;
+				width: $calendar_cell_width;
+				height: $calendar_cell_width;
+				padding: 0;
+				margin: auto;
+				text-align: center;
+				// overflow: hidden;
+				&:first-child{
+					width: unset;
+					padding: $table-condensed-cell-padding;
+					max-width: $calendar_cell_user_width;
+					text-align: right;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+				.day_message{
+					display: block;
+					position: relative;
+					margin: $calendar_cell_width/3 0 0 $calendar_cell_width/3;
+					background: $gray-lighter;
+					height: $calendar_chip_size;
+					width: $calendar_chip_size;
+					border-radius: $calendar_chip_size/2;
+					border:1px solid darken($calendar_chip_color, 10);
+				}
+				.cell-block{
+					width: $calendar_cell_width - 1;
+					height: $calendar_cell_width;
+					overflow: hidden;
+				}
+			}
+		}
+		.service{
+			background: $calendar_service_background;
+			font-weight: bold;
+			color:$gray-light;
+			td{
+				padding: $table-condensed-cell-padding;
+				&:first-child{
+					text-align: left;
+				}
+			}
+		}
+		.presence_rate{
+			padding-bottom: 10px;
+			font-size: $font-size-small/1.2;
+			text-align: center;
+			background: $gray-lighter;
+			color:$gray-light;
+			td{
+				padding: $table-condensed-cell-padding;
+				&:first-child{
+					padding-bottom: 20px;
+				}
+			}
+		}
+	}
+	tfoot{
+		background: $body-bg
+	}
+}
+
+// Fixe thead of table
+#calendar-v2{
+	table {
+		overflow-x: scroll;
+		display: block;
+	}
+	thead, tbody {
+		display: block;
+	}
+	tbody {
+		overflow-y: scroll;
+		max-height: 700px;
+	}
+	td, th {
+		min-width: $calendar_cell_width;
+		max-width: $calendar_cell_width;
+		&:first-child{
+			min-width: $calendar_cell_user_width;
+			max-width: $calendar_cell_user_width;
+		}
+	}
+}
+
+.legend{
+	.label_holiday{
+		background: $color-holiday!important;
+	}
+	.label_unworked{
+		background: darken($color-unworked,10)!important;
+	}
+	.label_pending{
+		background: repeating-linear-gradient(-45deg, lighten($gray-light,20), lighten($gray-light,20) 4px, $gray-light 5px, $gray-light 10px)!important;
+	}
+	.day_message{
+		display: inline-block;
+		background: $gray-lighter!important;
+		height: $calendar_chip_size;
+		width: $calendar_chip_size;
+		border-radius: $calendar_chip_size/2;
+		border:1px solid darken($calendar_chip_color, 10);
+	}
+}
+
+.calendar_popover{
+	hr{
+		margin: 10px 0;
+	}
+	ul{
+		padding-left: 25px;
+	}
+}

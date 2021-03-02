@@ -1,0 +1,75 @@
+#manager_compteur{
+	//.table-custom1();
+	td{	
+		&:nth-child(1){
+			font-size: 14px;
+			a:first-of-type{font-size: 18px;font-weight: bold;color:$text-color}
+			a,small{display: block;}
+		}
+		&:nth-child(2){
+			padding: 4px 4px 0 0;
+			h2{
+				margin: 0;
+				padding-top: 5px;
+				height: 38px;
+				text-align: right;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				small{display: block;font-weight: normal}
+				font-size: 18px;
+			}
+			&>div{
+				text-align: right;
+				min-width: 350px;
+				h2{
+					display: inline-block;
+					white-space: nowrap;overflow: hidden;text-overflow: ellipsis;
+					@media (min-width: $screen-md-min) and (max-width: $screen-md-max)  {width: 340px;}
+					@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)  {width: 170px;}
+					@media (max-width: $screen-xs-max) {width: 150px;}
+				}
+				&>div{
+					display: inline-block;
+ 					min-width: 180px;
+					vertical-align: top;
+					div{
+						display: inline-block;
+						width: 55px;
+						margin-left: 4px;
+						padding: 10px 0;
+						text-align: center;
+						&:nth-child(1){
+							background: lighten($color-balance-positive, 20%);
+							color:darken($color-balance-positive, 20%);
+							&.nok{background: lighten($color-balance-negative, 20%);color:darken($color-balance-negative, 20%);}
+						}
+						&:nth-child(2){
+							background: lighten($color-balance-consumed, 5%);
+							color:darken($color-balance-consumed, 20%);
+						}
+						&:nth-child(3){
+							background: lighten($color-balance-pending, 20%);
+							color:darken($color-balance-pending, 20%);
+						}
+					}
+				}
+			}
+		}
+	}
+	th:last-child {
+		padding:$table-cell-padding;
+		padding-right: 4px;
+		span{
+			float: right;
+			margin-left: 3px;
+			padding: 1px 5px;
+			font-size: 12px;
+			&:nth-child(4){background: lighten($color-balance-positive, 20%);color:darken($color-balance-positive, 20%);}
+			&:nth-child(3){background: lighten($color-balance-negative, 20%);color:darken($color-balance-negative, 20%);}
+			&:nth-child(2){background: lighten(#ddd, 5%);color:darken(#ddd, 20%);}
+			&:nth-child(1){background: lighten($color-balance-pending, 20%);color:darken($color-balance-pending, 20%);}
+		}
+
+	}
+}

@@ -1,0 +1,21 @@
+.alphabetsList {
+    display: flex;
+
+    .alphabet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        width: 27px;
+        height: 22px;
+        background-color: $color-white;
+        border: 1px solid $color-gray-light-2;
+        color: $color-gray;
+        font-size: 12px;
+        font-weight: 500;
+
+        &:not(:last-child){
+            margin-right: 4px;
+        }
+    }
+}

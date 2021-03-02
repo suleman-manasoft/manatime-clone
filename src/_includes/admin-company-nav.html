@@ -1,0 +1,33 @@
+<div class="mb-20 flex">
+    <a href="{% link admin-companies.html %}" class="btn btn-default btn-sm centered-button onlyIconButton mr-6" type="button">
+        <i class="fa fa-arrow-left fa-fw"></i>
+    </a>
+    <div class="btn-group tabbed-button-group" role="group">
+        <a class="btn btn-default btn-sm {% if include.active == 'summary' %}active{% endif %}"  href="{% link admin-company-summary.html %}">
+            Summary
+        </a>
+        <a class="btn btn-default btn-sm {% if include.active == 'company' %}active{% endif %}"  href="{% link admin-company-company.html %}">
+            Company       
+        </a>
+        <a class="btn btn-default btn-sm {% if include.active == 'subscription' %}active{% endif %}"  href="{% link admin-company-subscription.html %}">
+            Subscription       
+        </a>
+        <a class="btn btn-default btn-sm {% if include.active == 'user' %}active{% endif %}"  href="{% link admin-company-consult-users.html %}">
+            User       
+        </a>
+        <div class="btn-group">
+            <a type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+            Logs <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Tablet</a></li>
+              <li><a href="#">Smartphone</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-default btn-sm"  href="javascript:;">
+           <i class="fa fa-line-chart"></i> Zoho       
+        </a>
+        <a class="btn btn-default btn-sm"  href="javascript:;">
+            <i class="fa fa-line-chart"></i> Pipedrive       
+        </a>
+      </div>
+</div>

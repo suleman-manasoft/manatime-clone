@@ -1,0 +1,132 @@
+body {
+    font-size: $font-size;
+    font-family: $font-family;
+}
+
+.underlined-heading {
+    font-size: 18px;
+    color: $color-gray;
+    font-weight: 500;
+    padding-bottom: 11px;
+    position: relative;
+    display: block;
+    line-height: 21.09px;
+        &::after {
+        content: "";
+        height: 1px;
+        width: 100%;
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        background-color: $color-gray-light-5;
+    }
+}
+
+.page-header h1 {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.heading-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .heading {
+        font-size: 18px;
+        font-weight: 400;
+        color: $color-gray;
+        position: relative;
+        padding-bottom: 10px;
+            &::after {
+                content: "";
+                height: 5px;
+                width: 42px;
+                position: absolute;
+                bottom: 0;
+                left: 0
+            }
+
+        &--blue {
+             &::after { 
+                background-color: $color-blue;
+             }
+        }
+
+        &--mahroon {
+            &::after { 
+               background-color: $color-maroon;
+            }
+       }
+
+       &--purple {
+           &::after {
+              background-color: $color-purple;
+           }
+       }
+
+       &--violet {
+        &::after {
+           background-color: $color-violet;
+        }
+      }
+
+      
+      &--lightBlue {
+        &::after {
+            background-color: $color-blue-light;
+         }   
+      }
+
+      &--yellow {
+        &::after {
+            background-color: $color-yellow;
+         }
+      }
+
+      &--brown {
+        &::after {
+            background-color: $color-brown;
+         }
+      }
+    }
+
+    .status {
+        padding: 3px 4px 2px 22px;
+        align-items: center;
+        border-width: 1px;
+        border-style: solid;
+        border-color:gray;
+        font-size: 14px;
+        border-radius: 3px;
+        display: inline-block;
+        position: relative;
+        line-height: 1;
+        &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            top: 4px;
+            left: 5px;
+            background-color: $color-gray;
+        }
+
+        &--activated {
+            border-color: $color-green;
+            color: $color-green;
+            &::before {
+                background-color: $color-green;
+            }
+        }
+
+        &--disabled {
+            border-color: $color-red;
+            color: $color-red;
+            &::before {
+                background-color: $color-red;
+            }
+        }
+    }
+}

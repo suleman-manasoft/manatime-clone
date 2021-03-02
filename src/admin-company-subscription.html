@@ -1,0 +1,96 @@
+---
+layout: default
+permalink: /admin-company-subscription
+title: Company
+subtitle: Company Name
+activeTab: admin-companies
+isChart: true
+scripts: [admin-company]
+---
+{% include admin-company-nav.html active="subscription" %}
+<div class="block block-normal adminCompanyFormBlock">
+    <form action="">
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="checkbox">
+                <label class="centered-checkbox" ><input type="checkbox" value=""><span>Absence</span></label>
+                <label  class="centered-checkbox" ><input type="checkbox" value="">Hour</label>
+                <label  class="centered-checkbox" ><input type="checkbox" value="">Expense</label>
+                <label class="centered-checkbox" ><input type="checkbox" value="">Directory</label>
+                <label class="centered-checkbox" ><input type="checkbox" value="">Presence</label>
+                <label class="centered-checkbox" ><input type="checkbox" value="">Document</label>
+                <label class="centered-checkbox" ><input type="checkbox" value="">Event</label>
+            </div>
+        <hr class="mt-7" />
+        </div>
+    </div>
+    <div>
+        <button type="button" class="btn btn-success btn-md">Save</button>
+        <button type="button" class="btn btn-default btn-md">Cancel</button>
+    </div>
+    </form>
+</div>
+
+<div class="block block-normal block-normal-main">
+    <form action="">
+        <div class="row">
+            <div class="col-lg-7 border-right-grey">
+            <label class="custom-label">Subscription type</label>
+            <br>
+            <div class="col-sm text-start">
+                <div class="btn-group btn-group-primary  btn-custom-group-toggle" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">Premium</button>
+                    <button type="button" class="btn btn-default active">Starter</button>
+                </div>
+            </div>
+            <div class="expirationDateContainer">
+            <br>
+            <label class="custom-label mt-3">Expiration Date</label>
+            <br>
+            <div class="col-sm text-start dateAndMonths">
+                <div class="input-group date">
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    <input type="text" id="company_registrationAt" name="company[registrationAt]" placeholder="yyyy-mm-dd" autocomplete="off" class="form-control">
+                </div>
+                <div class="btn-group btn-group-primary btn-custom-group-toggle" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default active">1 month</button>
+                    <button type="button" class="btn btn-default">3 months</button>
+                    <button type="button" class="btn btn-default">6 months</button>
+                    <button type="button" class="btn btn-default">1 year</button>
+                    <button type="button" class="btn btn-default">2 years</button>
+                </div>
+            </div>
+            <hr class="mt-4" />
+            <div class="mb-10">
+                <button type="button" class="btn btn-success btn-md">Save</button>
+                <button type="button" class="btn btn-default btn-md">Cancel</button>
+            </div>
+            </div>
+            </div>
+            <div class="col-lg-5">
+                <div>
+                    <div class="spaced-text-list">
+                    <label class="custom-label weight-500">Subscriptions</label>
+                    <div class="spaced-text">
+                            <span>Subscriptions 3</span>
+                            <span>01/01/2019 12/31/2020</span>
+                            <span class="text-badge">
+                              <span class="badge badge-green-medium badge--normal-text badge--rounded badge--padded m-0">In progress</span>
+                            </span>
+                    </div>
+                    <div class="spaced-text text-muted">
+                        <span>Subscriptions 2</span>
+                        <span>01/01/2019 12/31/2020</span>
+                        <span>(Expired)</span>
+                    </div>
+                    <div class="spaced-text text-muted">
+                        <span>Subscriptions 1</span>
+                        <span>01/01/2019 12/31/2020</span>
+                        <span>(Unsubscribed)</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

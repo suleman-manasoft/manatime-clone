@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+      {% include head.html title="Super Admin" %}
+  </head>
+  <body>
+    <header>
+      {% include navbar.html %}
+    </header>
+    <div id="body" class="container">
+      <div class="row">
+        <div class="col-sm-3 col-lg-2 hidden-xs">
+          <div class="sidebar">
+            {% include button-add.html %}
+            {% include sidebar-admin.html %}
+          </div>
+        </div>
+        <div class="col-sm-9 col-lg-10">
+          <div class="page-header">
+               <h1>{{ page.title }}
+                {% if page.subtitle %}
+                <small>{{ page.subtitle }}</small>
+                {% endif %}
+          </div>
+          <div class="main-content">
+             {{content}} 
+          </div>   
+        </div>
+      </div>
+    </div>
+    <footer>
+      {% if page.isChart %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script> 
+      {% endif %}
+      {% include footer.html %}
+      {% for script in page.scripts %}
+         <script type="text/javascript" src="./assets/js/{{script}}.js"></script>
+      {% endfor %}
+    </footer>
+  </body>
+</html>
